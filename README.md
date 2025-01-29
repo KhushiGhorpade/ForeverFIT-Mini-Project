@@ -1,3 +1,3 @@
 # ForeverFIT
 A simple workout designer
-by Azeem Sayyad and Team
+by Azeem Sayyad
