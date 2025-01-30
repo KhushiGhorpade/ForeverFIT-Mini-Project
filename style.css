@@ -75,10 +75,21 @@ body {
     color: #ffcc03;
 }
 
-/* Hero Section Styling */
+/* Hero Section Homepage, About Page */
 .hero {
     height: 100vh;
     background: url('images/img1.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+
+}
+.hero-about {
+    height: 100vh;
+    background: url('images/about-img.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,6 +111,19 @@ body {
     z-index: 1;
 }
 
+.hero-about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/about-img.jpg') no-repeat center center/cover;
+    filter: blur(5px);
+    /* Apply blur effect */
+    z-index: 1;
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -115,7 +139,7 @@ body {
     z-index: 2;
 }
 
-.hero h1 {
+.hero h1, .hero-about h1 {
     font-size: 4rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -146,7 +170,7 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero h1 {
+    .hero h1, .hero-about h1 {
         font-size: 2.5rem;
     }
 
@@ -160,13 +184,13 @@ body {
     }
 }
 
-/* About Section */
-.about {
+/* Significance Section Homepage*/
+.significance {
     padding: 4rem 1rem;
     background-color: #f9f9f9;
 }
 
-.about .container {
+.significance .container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -175,36 +199,36 @@ body {
     margin: 0 auto;
 }
 
-.about-content {
+.significance-content {
     flex: 1 1 45%;
     text-align: left;
     padding: 1rem;
 }
 
-.about-content h2 {
+.significance-content h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #333;
 }
 
-.about-content p {
+.significance-content p {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #555;
     margin-bottom: 1rem;
 }
 
-.about-content strong {
+.significance-content strong {
     color: #ffcc03;
 }
 
-.about-image {
+.significance-image {
     flex: 1 1 45%;
     text-align: center;
     padding: 1rem;
 }
 
-.about-image img {
+.significance-image img {
     width: 100%;
     max-width: 400px;
     border-radius: 10px;
@@ -212,72 +236,105 @@ body {
     transition: transform 0.3s ease;
 }
 
-.about-image img:hover {
+.significance-image img:hover {
     transform: scale(1.05);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .about .container {
+    .significance .container {
         flex-direction: column;
         text-align: center;
     }
 
-    .about-content,
-    .about-image {
+    .significance-content,
+    .significance-image {
         flex: 1 1 100%;
     }
 
-    .about-image img {
+    .significance-image img {
         max-width: 300px;
     }
 }
 
-/* Contact Section */
-.contact {
+/* About Us Page */
+
+.about-container {
+    width: 80%;
+    margin: 3rem auto;
+    overflow: hidden;
+    padding: 20px;
+    /* background: white; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.about-content h2 {
+    color: #ffcc03;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    margin-bottom: 10px;
+}
+
+.about-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.about-content img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Feedback Section Feedback Page*/
+.feedback {
     padding: 4rem 1rem;
     background-color: #f9f9f9;
     text-align: center;
 }
 
-.contact .container {
+.feedback .container {
     max-width: 800px;
     margin: 0 auto;
 }
 
-.contact h2 {
+.feedback h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #333;
 }
 
-.contact p {
+.feedback p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     color: #555;
 }
 
-.contact-form {
+.feedback-form {
     background-color: #fff;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form .form-group {
+.feedback-form .form-group {
     margin-bottom: 1.5rem;
     text-align: left;
 }
 
-.contact-form label {
+.feedback-form label {
     display: block;
     font-weight: bold;
     margin-bottom: 0.5rem;
     color: #333;
 }
 
-.contact-form input,
-.contact-form textarea {
+.feedback-form input,
+.feedback-form textarea {
     width: 100%;
     padding: 0.8rem;
     border: 1px solid #ccc;
@@ -285,13 +342,13 @@ body {
     font-size: 1rem;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
+.feedback-form input:focus,
+.feedback-form textarea:focus {
     border-color: #ffcc03;
     outline: none;
 }
 
-.contact-form button.submit-button {
+.feedback-form button.submit-button {
     background-color: #ffcc03;
     color: white;
     padding: 0.8rem 2rem;
@@ -303,15 +360,46 @@ body {
     transition: background 0.3s ease;
 }
 
-.contact-form button.submit-button:hover {
+.feedback-form button.submit-button:hover {
     background-color: #f9f9f9;
     color: #ffcc03;
 }
 
 @media (max-width: 768px) {
-    .contact-form {
+    .feedback-form {
         padding: 1.5rem;
     }
+}
+
+/* Contact Page */
+.contact-container {
+    width: 80%;
+    margin: 98px auto;
+    overflow: hidden;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.contact-content h2 {
+    color: #ffcc03;
+    margin-bottom: 10px;
+}
+
+.contact-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin: 20px 0;
+    font-size: 18px;
 }
 
 /* Footer Styling */

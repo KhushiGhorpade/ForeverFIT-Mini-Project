@@ -80,9 +80,10 @@
             color: #ffcc03;
         }
 
-        .container {
+        .form-container {
             max-width: 600px;
-            margin: 3rem auto;
+            margin-top: 98px;
+            margin: 98px auto 3rem auto;
             background: #fff;
             padding: 2rem;
             border-radius: 10px;
@@ -139,6 +140,127 @@
             background-color: #f9f9f9;
             color: #ffcc03;
         }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 2rem 1rem;
+        }
+
+        .footer .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-brand {
+            flex: 1 1 30%;
+            text-align: left;
+            padding: 1rem;
+        }
+
+        .footer-brand h2 {
+            font-size: 1.8rem;
+        }
+
+        .footer-brand p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        .footer-links {
+            flex: 1 1 20%;
+            padding: 1rem;
+        }
+
+        .footer-links h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links ul li a {
+            color: #ffcc03;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links ul li a:hover {
+            color: #ffcc03;
+        }
+
+        .footer-contact {
+            flex: 1 1 30%;
+            padding: 1rem;
+        }
+
+        .footer-contact h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-contact p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        .footer-contact a {
+            color: #ffcc03;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-contact a:hover {
+            color: #ffcc03;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .social-icons a img {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a img:hover {
+            transform: scale(1.1);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        @media (max-width: 768px) {
+            .footer .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links,
+            .footer-brand,
+            .footer-contact {
+                flex: 1 1 100%;
+                padding: 1rem 0;
+            }
+        }
     </style>
 </head>
 
@@ -152,10 +274,11 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
         <a href="/create-workout.html" class="cta-button">Create Workout</a>
     </nav>
-    <div class="container">
+    <div class="form-container">
         <h1>Create Your Workout</h1>
         <form action="#" method="POST">
             <div class="form-group">
@@ -203,6 +326,38 @@
             <button type="submit">Create My Workout</button>
         </form>
     </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-brand">
+                <h2>Forever<span style="color: #ffcc03;">FIT</span></h2>
+                <p>Your trusted partner in fitness and wellness.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Feedback</a></li>
+                    <li><a href="/create-workout.html">Create Workout</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:support@foreverfit.com">support@foreverfit.com</a></p>
+                <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+                <p>Follow Us:</p>
+                <div class="social-icons">
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
+                            alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ForeverFIT. All Rights Reserved. By Khushi, Vaishnavi, Harsh and Azeem</p>
+        </div>
+    </footer>
     <script src="create_workout.js"></script>
 </body>
 
