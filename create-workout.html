@@ -5,263 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Workout - ForeverFIT</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        /* Navbar Styling */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #333;
-            padding: 0.5rem 1rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 10;
-        }
-
-        .navbar .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .navbar .logo a {
-            text-decoration: none;
-            color: white;
-            transition: color 0.3s ease;
-        }
-
-        .navbar .logo a:hover {
-            color: #ffcc03;
-        }
-
-        .navbar .nav-links {
-            display: flex;
-            gap: 1rem;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .navbar .nav-links li {
-            display: inline;
-        }
-
-        .navbar .nav-links a {
-            text-decoration: none;
-            color: white;
-            padding: 0.5rem 1rem;
-            transition: background 0.3s ease;
-        }
-
-        .navbar .nav-links a:hover {
-            background-color: #555;
-            border-radius: 5px;
-        }
-
-        .navbar .cta-button {
-            padding: 0.5rem 1rem;
-            background-color: #ffcc03;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
-
-        .navbar .cta-button:hover {
-            background-color: #f5f5fa;
-            color: #ffcc03;
-        }
-
-        .form-container {
-            max-width: 600px;
-            margin-top: 98px;
-            margin: 98px auto 3rem auto;
-            background: #fff;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 2rem;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        label {
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            display: block;
-        }
-
-        input,
-        select,
-        button {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        input:focus,
-        select:focus {
-            border-color: #ffcc03;
-            outline: none;
-        }
-
-        button {
-            background-color: #ffcc03;
-            color: white;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #f9f9f9;
-            color: #ffcc03;
-        }
-
-        /* Footer Styling */
-        .footer {
-            background-color: #333;
-            color: #fff;
-            padding: 2rem 1rem;
-        }
-
-        .footer .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-brand {
-            flex: 1 1 30%;
-            text-align: left;
-            padding: 1rem;
-        }
-
-        .footer-brand h2 {
-            font-size: 1.8rem;
-        }
-
-        .footer-brand p {
-            font-size: 1rem;
-            color: #ccc;
-        }
-
-        .footer-links {
-            flex: 1 1 20%;
-            padding: 1rem;
-        }
-
-        .footer-links h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-links ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-links ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-links ul li a {
-            color: #ffcc03;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links ul li a:hover {
-            color: #ffcc03;
-        }
-
-        .footer-contact {
-            flex: 1 1 30%;
-            padding: 1rem;
-        }
-
-        .footer-contact h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
-
-        .footer-contact p {
-            font-size: 1rem;
-            color: #ccc;
-        }
-
-        .footer-contact a {
-            color: #ffcc03;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-contact a:hover {
-            color: #ffcc03;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 0.5rem;
-            margin-top: 0.5rem;
-        }
-
-        .social-icons a img {
-            width: 24px;
-            height: 24px;
-            transition: transform 0.3s ease;
-        }
-
-        .social-icons a img:hover {
-            transform: scale(1.1);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            margin-top: 2rem;
-            font-size: 0.9rem;
-            color: #ccc;
-        }
-
-        @media (max-width: 768px) {
-            .footer .container {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .footer-links,
-            .footer-brand,
-            .footer-contact {
-                flex: 1 1 100%;
-                padding: 1rem 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -280,16 +24,16 @@
     </nav>
     <div class="form-container">
         <h1>Create Your Workout</h1>
-        <form action="#" method="POST">
-            <div class="form-group">
+        <form action="#" method="POST" class="create-workout-form">
+            <div class="create-workout-form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
             </div>
-            <div class="form-group">
+            <div class="create-workout-form-group">
                 <label for="age">Age</label>
                 <input type="number" id="age" name="age" placeholder="Enter your age" required>
             </div>
-            <div class="form-group">
+            <div class="create-workout-form-group">
                 <label for="gender">Gender</label>
                 <select id="gender" name="gender" required>
                     <option value="" disabled selected>Select your gender</option>
@@ -298,7 +42,7 @@
                     <option value="other">Other</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="create-workout-form-group">
                 <label for="experience">Workout Experience</label>
                 <select id="experience" name="experience" required>
                     <option value="" disabled selected>Select your experience level</option>
@@ -307,15 +51,15 @@
                     <option value="advanced">Advanced</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="create-workout-form-group">
                 <label for="weight">Weight (kg)</label>
                 <input type="number" id="weight" name="weight" placeholder="Enter your weight" required>
             </div>
-            <div class="form-group">
+            <div class="create-workout-form-group">
                 <label for="height">Height (cm)</label>
                 <input type="number" id="height" name="height" placeholder="Enter your height" required>
             </div>
-            <div class="form-group">
+            <div class="create-workout-form-group">
                 <label for="goal">Goal</label>
                 <select id="goal" name="goal" required>
                     <option value="" disabled selected>Select your goal</option>

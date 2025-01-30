@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Smooch Sans', 'sans-serif';
-    font-size:larger;
+    font-size: larger;
     font-weight: 500;
     font-stretch: expanded;
     
@@ -411,6 +411,68 @@ body {
 .contact-info li {
     margin: 20px 0;
     font-size: 18px;
+}
+
+/* Create Workout Page */
+.form-container {
+    max-width: 600px;
+    margin-top: 98px;
+    margin: 98px auto 3rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.create-workout-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-workout-form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+    border-color: #ffcc03;
+    outline: none;
+}
+
+.create-workout-form button {
+    background-color: #ffcc03;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.create-workout-form button:hover {
+    background-color: #f9f9f9;
+    color: #ffcc03;
 }
 
 /* Footer Styling */
