@@ -93,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Pull Day
     function pullWorkout(){
-      console.log("yo")
       pullDay.push(back_e1[Math.floor(Math.random() * back_e1.length)])
       pullDay.push(sets + "x" + reps)
       pullDay.push(back_o1[Math.floor(Math.random() * back_o1.length)])
