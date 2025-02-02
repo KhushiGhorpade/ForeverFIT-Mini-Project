@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Sacramento&family=Smooch+Sans:wght@100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +7,11 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Smooch Sans', 'sans-serif';
+    font-size: larger;
+    font-weight: 500;
+    font-stretch: expanded;
+    
 }
 
 /* Navbar Styling */
@@ -19,26 +25,28 @@ body {
     width: 100%;
     top: 0;
     z-index: 10;
+    text-decoration: dashed;
+    size: 2rem;
 }
 
 .navbar .logo {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: lighter;
 }
 
 .navbar .logo a {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     transition: color 0.3s ease;
 }
 
 .navbar .logo a:hover {
-    color: #ffcc03;
+    color: #ffcd03;
 }
 
 .navbar .nav-links {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -62,7 +70,7 @@ body {
 
 .navbar .cta-button {
     padding: 0.5rem 1rem;
-    background-color: #ffcc03;
+    background-color: #00000080;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -71,8 +79,8 @@ body {
 }
 
 .navbar .cta-button:hover {
-    background-color: #f5f5fa;
-    color: #ffcc03;
+    background-color: #ffcd03bd;
+    color: #000000;
 }
 
 /* Hero Section Homepage, About Page */
@@ -154,18 +162,20 @@ body {
 
 .hero .cta-button {
     padding: 0.8rem 1.5rem;
-    background-color: #ffcc03;
-    color: white;
-    text-decoration: none;
+    background-color: #ffcd03bd;
+    color: rgb(0, 0, 0);
+    text-decoration:dotted;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: bold;
     transition: background 0.3s ease;
+    height:fit-content;
+    width: fit-content;
 }
 
 .hero .cta-button:hover {
-    background-color: #f5f5fa;
-    color: #ffcc03;
+    background-color: #000000c2;
+    color: #c8c8c8;
 }
 
 /* Responsive Design */
@@ -187,7 +197,8 @@ body {
 /* Significance Section Homepage*/
 .significance {
     padding: 4rem 1rem;
-    background-color: #f9f9f9;
+    background: rgba(0,0,0,0.0);
+    backdrop-filter: blur(10px);
 }
 
 .significance .container {
@@ -402,6 +413,68 @@ body {
     font-size: 18px;
 }
 
+/* Create Workout Page */
+.form-container {
+    max-width: 600px;
+    margin-top: 98px;
+    margin: 98px auto 3rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.create-workout-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-workout-form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus,
+select:focus {
+    border-color: #ffcc03;
+    outline: none;
+}
+
+.create-workout-form button {
+    background-color: #ffcc03;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.create-workout-form button:hover {
+    background-color: #f9f9f9;
+    color: #ffcc03;
+}
+
 /* Footer Styling */
 .footer {
     background-color: #333;
@@ -458,7 +531,7 @@ body {
 }
 
 .footer-links ul li a:hover {
-    color: #ffcc03;
+    color: #ffffff;
 }
 
 .footer-contact {
@@ -483,7 +556,7 @@ body {
 }
 
 .footer-contact a:hover {
-    color: #ffcc03;
+    color: #ffffff;
 }
 
 .social-icons {
@@ -508,6 +581,7 @@ body {
     font-size: 0.9rem;
     color: #ccc;
 }
+
 
 @media (max-width: 768px) {
     .footer .container {
