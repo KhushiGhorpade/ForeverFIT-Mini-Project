@@ -112,6 +112,28 @@ hr {
     position: relative;
 }
 
+.hero-nutrition {
+    height: 100vh;
+    background: url('images/about-img.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero-workout {
+    height: 100vh;
+    background: url('images/img3.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
 .hero::before {
     content: '';
     position: absolute;
@@ -132,7 +154,30 @@ hr {
     width: 100%;
     height: 100%;
     background: url('images/about-img.jpg') no-repeat center center/cover;
-    /* Apply blur effect */
+    filter: blur(5px);
+    z-index: 1;
+
+}
+.hero-nutrition::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/nutrition-hero.jpg') no-repeat center center/cover;
+    filter: blur(5px);
+    z-index: 1;
+}
+
+.hero-workout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/img3.jpg') no-repeat center center/cover;
     filter: blur(5px);
     z-index: 1;
 }
@@ -144,7 +189,6 @@ hr {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Dark overlay for better readability */
 }
 
 .hero-content {
@@ -153,7 +197,7 @@ hr {
 }
 
 .hero h1,
-.hero-about h1 {
+.hero-about h1, .hero-nutrition h1, .hero-workout h1 {
     font-size: 4rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -357,7 +401,6 @@ hr {
     margin: 3rem auto;
     overflow: hidden;
     padding: 20px;
-    /* background: white; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
@@ -464,6 +507,80 @@ hr {
     }
 }
 
+/* Nutrition Page - Diet 1 */
+.diet {
+    padding: 4rem 1rem;
+    background: rgba(0, 0, 0, 0.0);
+    backdrop-filter: blur(10px);
+}
+
+.diet .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.diet_content {
+    flex: 1 1 45%;
+    text-align: left;
+    padding: 1rem;
+}
+
+.diet_content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.diet_content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.diet_content strong {
+    color: #ffcc03;
+}
+
+.diet_image {
+    flex: 1 1 45%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.diet_image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.diet_image img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .diet .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .diet_content,
+    .diet_image {
+        flex: 1 1 100%;
+    }
+
+    .diet_image img {
+        max-width: 300px;
+    }
+}
+
 /* Contact Page */
 .contact-container {
     width: 70%;
@@ -495,68 +612,6 @@ hr {
 .contact-info li {
     margin: 20px 0;
     font-size: 18px;
-}
-
-/* Create Workout Page */
-.form-container {
-    max-width: 600px;
-    margin-top: 98px;
-    margin: 98px auto 3rem auto;
-    background: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.form-container h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 2rem;
-}
-
-.create-workout-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.create-workout-form-group {
-    margin-bottom: 1.5rem;
-}
-
-label {
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    display: block;
-}
-
-input,
-select,
-button {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-input:focus,
-select:focus {
-    border-color: #ffcc03;
-    outline: none;
-}
-
-.create-workout-form button {
-    background-color: #ffcc03;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.create-workout-form button:hover {
-    background-color: #f9f9f9;
-    color: #ffcc03;
 }
 
 /* Footer Styling */
