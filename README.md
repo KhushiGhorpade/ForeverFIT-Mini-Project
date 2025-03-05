@@ -1,7 +1,7 @@
 # ForeverFIT
 
-https://azeemsayyad247.github.io/ForeverFIT/index.html 
+https://khushighorpade.github.io/ForeverFIT-Mini-Project/index.html
 
 
 A simple workout designer
-by Azeem Sayyad, Tanish Adke, Shital Patil and Omkar Sanjeev
+by Azeem Sayyad, Khushi Ghorpade, Vaishnavi Lele and Harsh Chauhan
