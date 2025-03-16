@@ -11,7 +11,6 @@ body {
     font-size: larger;
     font-weight: 500;
     font-stretch: expanded;
-
 }
 
 hr {
@@ -164,6 +163,7 @@ hr {
     z-index: 1;
 
 }
+
 .hero-nutrition::before {
     content: '';
     position: absolute;
@@ -203,7 +203,9 @@ hr {
 }
 
 .hero h1,
-.hero-about h1, .hero-nutrition h1, .hero-workout h1 {
+.hero-about h1,
+.hero-nutrition h1,
+.hero-workout h1 {
     font-size: 4rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -430,6 +432,60 @@ hr {
     max-width: 600px;
     border-radius: 10px;
     margin-top: 20px;
+}
+
+/* Workout Page */
+
+.w-header {
+    background-color: #ffcc03;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.w-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.workout-day {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.workout-day h2 {
+    text-align: center;
+    color: #333;
+}
+
+.workout-day ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.workout-day li {
+    margin: 10px 0;
+}
+
+.day-title {
+    font-size: 1.5em;
+    color: #ffcc03;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.exercise {
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.sets-reps {
+    font-style: italic;
+    color: #555;
 }
 
 /* Feedback Section Feedback Page*/
@@ -726,7 +782,6 @@ hr {
     font-size: 0.9rem;
     color: #ccc;
 }
-
 
 @media (max-width: 768px) {
     .footer .container {
